@@ -17,5 +17,23 @@
                 theh1.innerHTML = celsius * 1.8 + 32;
             }
         </script>
+        <label for="slider">Degrees Celsius</label>
+        <input type="range" min=-20 max=100 id="slider" onmousemove="changetemp();" value=0>
+        
+        <h1 id="degreesc">Degrees C: 0</h1>
+        <h1 id="degreesf">Degrees F: 32</h1>
+        
+        <script>
+            changetemp = function() {
+                theslider=document.querySelector("#slider");
+                c=theslider.value;
+                f=c*1.8 + 32;
+                ch1=document.querySelector("#degreesc");
+                fh1=document.querySelector("#degreesf");
+                ch1.innerHTML="Degrees C: " + c;
+                fh1.innerHTML="Degrees F: " + f;
+            }
+            
+        </script>
     </body>
 </html>
