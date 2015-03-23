@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Address Table</title>
+    <link rel="stylesheet" type="text/css" href="addresstablestyle.css">
+  </head>
+
+<body>
+    <table id="addresstable">
+      <caption>Address Table</caption>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+          </tr>
+    </table>
+
+
+<label>First Name</label>
+<input type = "text" id="firstnamearea">
+
+<label>Last Name</label>
+<input type = "text" id="lastnamearea">
+
+<label>Email</label>
+<input type = "text"id="emailarea">
+
+<label>Phone Number</label>
+<input type = "text" id="phonenumberarea">
+
+<button onclick="hello();">Add</button>
+
+
+<script>
+
+hello = function() {
+            firstnamearea=document.querySelector("#firstnamearea").value;
+            lastnamearea=document.querySelector("#lastnamearea").value;
+            emailarea=document.querySelector("#emailarea").value;
+            phonenumberarea=document.querySelector("#phonenumberarea").value;
+
+             t = document.querySelector("#addresstable")
+             trow = document.createElement("tr")
+             td1 = document.createElement("td")
+             contents1 = document.createTextNode(firstnamearea)
+             td1.appendChild(contents1)
+             trow.appendChild(td1)
+            td2 = document.createElement("td")
+             contents2 = document.createTextNode(lastnamearea)
+             td2.appendChild(contents2)
+             trow.appendChild(td2)
+             t.appendChild(trow)
+             td3 = document.createElement("td")
+             contents3 = document.createTextNode(emailarea)
+             td3.appendChild(contents3)
+             trow.appendChild(td3)
+             td4 = document.createElement("td")
+             contents4 = document.createTextNode(phonenumberarea)
+             td4.appendChild(contents4)
+             trow.appendChild(td4)
+             t.appendChild(trow)
+             
+             firstnamearea.value= "";
+             lastnamearea.value="";
+             emailarea.value="";
+             phonenumberarea.value="";
+          }
+</script>
+</body>
+</html>
