@@ -6,7 +6,9 @@
                 list-style-type: none;
                 font-size: 24px;
             }
-            .makered {color: red;}
+            .checkedoff {
+                text-decoration: line-through;
+            }
         </style>
     </head>
     <body>
@@ -34,9 +36,9 @@
             }
             select = function() {
                 if (this.checked)
-                this.parentNode.classList.add("makered");
+                this.parentNode.classList.add("checkedoff");
                 else
-                    this.parentNode.classList.remove("makered");
+                    this.parentNode.classList.remove("checkedoff");
             }
         </script>
         
